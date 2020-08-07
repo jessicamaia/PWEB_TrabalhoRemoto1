@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="browrser.css" />
+    <title>Maia Browser</title>
+</head>
+
+<body>
+    <div class="browser">
+        <!-- Barra de Ferramentas -->
+        <div class="row">
+            <div class="column left">
+                <span class="dot" style="background:#ED594A;"></span>
+            </div>
+            <div class="column middle">
+                <input type="text" name="address" class="address" value="www.thereal.com">
+                <input type="submit" name="submit" class="submit_button" value="IR"/>
+                <input type="submit" class="BtnNovo" value="Nova busca"/>
+            </div>
+            <div class="column right">
+                <div style="float:right" id="botao-detalhes">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Viewport do navegador -->
+        <div class="container-frameTab">
+            <iframe name="frameTab" class="responsive-iframe" src="./www.thereal.com/index.html"></iframe>
+        </div>
+
+    <script src="Js/script.js"></script>
+
+    </div>
+
+</body>
+
+</html>
+

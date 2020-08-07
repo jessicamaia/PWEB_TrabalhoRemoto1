@@ -1,0 +1,150 @@
+body {
+    font-family: Arial;
+    padding: 20px;
+    background-color: #D7DEE4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* The browser window */
+
+.browser {
+    border: 3px solid #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+
+/* Container for columns and the top "toolbar" */
+
+.row {
+    padding: 10px;
+    background: #f1f1f1;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+
+/* Create three unequal columns that floats next to each other */
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 15%;
+}
+
+.right {
+    width: 10%;
+}
+
+.middle {
+    width: 75%;
+}
+
+
+/* Clear floats after the columns */
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Three dots */
+
+.dot {
+    margin-top: 4px;
+    height: 14px;
+    width: 14px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+
+/* Style the input field */
+
+input[type=text] {
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    background-color: white;
+    margin-top: -8px;
+    height: 25px;
+    color: #666;
+    padding: 5px;
+}
+
+#url:before,
+#url:after {
+    content: ' ';
+    margin-top: -2px;
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+}
+
+#url:before {
+    margin-left: -30px;
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHfSURBVEiJ1dXLb01RFAbwX1/xiFcrEbnVmJBUqSppgoREIhERCVMJxYSxhokBs4rgP+ASzwEGOkKMSMREw0BMxEijZhrpgCiDvY6c3p7LoTXoSk72/s5Z+/vW3mudtZnt1lDSby7Wox0T+IhhfJ2uQA9OYmvg4Rh7Y+0zXMCrkoH+ska04HSQP0QrDsTTikfYhhsYRFNZ8mbcwZbAVXTFPBOAdbgS88O4VSRSpHoOfbGDXdgTfjuxI4h7pJzslfKyFJvRgSe/E9iAfTiFNyF0H48Dz8MHPAj8PgRuxrv9eIvRgsAJx+4cvoeFOZw/IliAuznchWt5wga8wFjgCkZy35dLJZknhC8FPtlYkXKyEUdhqN52/tIynl7pqGGoeYbIM+vAeanMD5FKciZtTCqEdqz8HwKfsR2LsYTiJJ+Rkjjg35OcFcqi2gium36ZVvOEtT/aO5yNsYJVEdmPwH1SHxoPvBvzpR8r2/0gPtUTGJXK7ATm4DuOhcDa+LYCywIflzrpmljzHLf9wZqkxtUfuBpkTD6iblyO+RGpCzTWkk15EVEfRKfUiqu4hLacTxsu4moQr5bqfqKWrMyFMyD1fXgZ4ybp2J5KF87regRlr8yWEKsEHpHO/lvJ9bPYfgIbm2FBBGLR2wAAAABJRU5ErkJggg==');
+}
+
+#url:after {
+    margin-left: 6px;
+    background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAsQAAALEBxi1JjQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAIgSURBVEiJtdVLSJVRFAXgT83MwJGVlT0gGoURpZOgBwUVETUoQqJB0zKsqKhJ6sRZahINa1zgoKDHrMJhA8kyGhS9H5ZBDxvozbIGZ0sm3utVbMHPuefn32vtvc4++5I/irEPHXiOAXzGA7ShZryggjzJt+IClqMLd/EOs7EMOzAfV1GHj5NI3BH8xG2sinelIVaJIhTiAHrxGlX5ktdiGOeCZC1uIYPf8fRJFs3BIsmyV6iYiHwe+nFZsvIYfuEhjmILdqIF3/AGK0OkVzqrnGjDV5Rjb1TSGpWMRSW6JXvKJbuGUZ2NvDCyaMPMyO6a3E1RGZW0RPz7SGhcVEn+bsa2+L06B/kIWvAhBC6he7xyYUmsT6XO6cf9PAQ6pcNdgGdYnE2gNNYfmIXBPMhJl0/EDKA0m0BfrAvxQmrBCdtOsjYjXcJK6RzGRRmGcFxq1wzOTEBehEe4HvsuXMkVcBM90oG1SiWvz/JtAdojqWqskdq0NpfARql7DqJEmj8DaPCvXTW4EYSHo5JOPMaMXAKNITAYYiVSG2aCrBff45uX2BWVnI9KNuUib4jAZtwJkUOSXXOxH004KY2M4njfEeJ1+ZA3xb7Z38HWgxOSxxVYGgLt0i3+gt2TIW+KfSM2SF4PjRIced7irDSHpkQ+GmVYhz3YjhXy+OM6NYb8dBbyKaFefplPGZ9w8X+RkybmPWm8Tjs56fo/kSqpn27yP5NGlhx8139FAAAAAElFTkSuQmCC');
+}
+
+
+/* Three bars (hamburger menu) */
+
+.bar {
+    width: 17px;
+    height: 3px;
+    background-color: #aaa;
+    margin: 3px 0;
+    display: block;
+}
+
+
+/* Page content */
+
+.container-frameTab {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+
+/* Then style the iframe to fit in the container div with full height and width */
+
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: this solid #ccc;
+}
+
+.close_button{
+    width: 15px;
+    height: 15px;
+    position:relative;
+    margin-left: 10px;
+    background-color: brown;
+    border-radius: 50%;
+}
